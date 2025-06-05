@@ -1,7 +1,8 @@
 import { writeFile } from 'node:fs/promises';
 import type { Year } from '../src/worker';
 
-export const START_DATE = new Date('2012-09-07T04:00:00.000Z');
+export const START_DATE = new Date();
+START_DATE.setFullYear(START_DATE.getFullYear() - 4);
 
 export type Contribution = {
   contributionCount: number;
